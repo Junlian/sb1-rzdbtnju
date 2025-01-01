@@ -1,0 +1,130 @@
+:root {
+  --primary-color: #007AFF;
+  --background-color: #1C1C1E;
+  --surface-color: #2C2C2E;
+  --text-color: #FFFFFF;
+  --text-secondary: #EBEBF5;
+  --border-color: #3C3C3E;
+  --primary-500: #007AFF;
+  --primary-600: #0056b3;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+}
+
+.app-container {
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 1rem;
+  height: calc(100vh - 4rem);
+}
+
+.code-editor {
+  background-color: var(--surface-color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.editor-header {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.editor-textarea {
+  width: 100%;
+  height: calc(100% - 40px);
+  background-color: transparent;
+  border: none;
+  color: var(--text-color);
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  padding: 1rem;
+  resize: none;
+}
+
+.editor-textarea:focus {
+  outline: none;
+}
+
+.ai-suggestions-panel {
+  background-color: var(--surface-color);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.suggestion-item {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.suggestion-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.suggestion-type {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.suggestion-content {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-family: 'Fira Code', monospace;
+  font-size: 12px;
+  margin: 0.5rem 0;
+  white-space: pre-wrap;
+}
+
+.suggestion-explanation {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin: 0.5rem 0;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 14px;
+  transition: opacity 0.2s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Upload styles */
+.upload-tab {
+  background-color: var(--surface-color);
+  border-radius: 8px;
+  grid-column: 1 / -1;
+}
+
+.upload-zone {
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: border-color 0.2s;
+}
